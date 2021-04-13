@@ -1,3 +1,5 @@
+#DEAPRICIATED
+
 from PIL import Image
 import os
 import PIL

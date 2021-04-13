@@ -1,5 +1,5 @@
 from secrets import *
-import praw, requests
+import praw, requests, os
 
 
 reddit = praw.Reddit(
@@ -11,7 +11,7 @@ reddit = praw.Reddit(
 )
 
 #print(reddit.read_only)
-for submission in reddit.subreddit("earthporn").hot(limit=10):
+for submission in reddit.subreddit("dankmemes").hot(limit=100):
     print(submission.title)
     try:
       img = requests.get(submission.url)
@@ -19,3 +19,5 @@ for submission in reddit.subreddit("earthporn").hot(limit=10):
         file.write(img.content)
     except:
       print("No image Found")
+
+os.system("python VideoGenerator.py")
