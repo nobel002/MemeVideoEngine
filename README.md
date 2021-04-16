@@ -1,4 +1,16 @@
-# MemeEngine
+```
+ ██████   ██████                                   ██████████                  ███
+░░██████ ██████                                   ░░███░░░░░█                 ░░░
+ ░███░█████░███  ██████ █████████████   ██████     ░███  █ ░████████   ███████████████████   ██████
+ ░███░░███ ░███ ███░░██░░███░░███░░███ ███░░███    ░██████ ░░███░░███ ███░░██░░██░░███░░███ ███░░███
+ ░███ ░░░  ░███░███████ ░███ ░███ ░███░███████     ░███░░█  ░███ ░███░███ ░███░███░███ ░███░███████
+ ░███      ░███░███░░░  ░███ ░███ ░███░███░░░      ░███ ░   ░███ ░███░███ ░███░███░███ ░███░███░░░
+ █████     ████░░██████ █████░███ ████░░██████     █████████████ ████░░███████████████ ████░░██████
+░░░░░     ░░░░░ ░░░░░░ ░░░░░ ░░░ ░░░░░ ░░░░░░     ░░░░░░░░░░░░░ ░░░░░ ░░░░░██░░░░░░░░ ░░░░░ ░░░░░░
+                                                                      ███ ░███
+                                                                     ░░██████
+                                                                      ░░░░░░
+```
 
 It does not create memes it just creates videos from those memes.
 
@@ -16,6 +28,20 @@ Now you should see `(venv)$> ...`
 If you see an error above don't worry aslong as you're seeing the `(venv)` prefix it should be oké.
 
 ## Documentation
+
+You'll first need to make a `secret.py` file. And in there you want the following variables:
+|Variable|Value|
+|---|---|
+|USERNAME|"Your username"|
+|PASSWORD|"Your password"|
+|CLIENTID|"Your client id<sup>°</sup>"|
+|CLIENTSECRET|"Your clients secret<sup>°</sup>"
+
+```
+You'll need to make a new script project on reddit. There youl see a short string of text underneath the project name. Thats your clientid. Then when you click on edit you'll see a long string of caracters. That's your client secret.
+```
+
+You might wanna chech some external info for this right [here](https://praw.readthedocs.io/en/latest/getting_started/quick_start.html).
 
 Here comes the documentation on theutilisation of this "pakket".
 
