@@ -2,7 +2,6 @@ import cv2, os, glob
 import numpy as np
 from PIL import Image
 import PIL
-from tqdm import tqdm, trang
 
 frameSize = (2000, 2000)
 FILENAME = "test003"
@@ -19,14 +18,21 @@ def scaleImages():
     resized = imgObj.resize(frameSize)
     resized.save(image)
 
+
+print("Started execution...")
+print("Scaling images")
+scaleImages()
+
+
 out = cv2.VideoWriter(f'generated/videos/{FILENAME}.avi',cv2.VideoWriter_fourcc(*'DIVX'), 0.2, frameSize)
 
+print("Stiching images together...")
 for filename in glob.glob(PATH):
     img = cv2.imread(filename)
     out.write(img)
 
-scaleImages()
+print("Finalizing")
 out.release()
 
-print("Finalizing")
+
 #os.system("ffmpeg -i generated/{FILENAME}.avi generated/{FILENAME}.mp4")
