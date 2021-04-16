@@ -2,22 +2,17 @@ import cv2, os, glob
 import numpy as np
 from PIL import Image
 import PIL
+from tqdm import tqdm, trang
 
 frameSize = (2000, 2000)
 FILENAME = "test003"
 PATH = "generated/images/*.png"
 
+
+#no dynamic scaling for this version
 def scaleImages():
   frameSize = (2000, 2000)
   imagePaths = glob.glob(PATH)
-
-  for image in imagePaths:
-    imgObj = Image.open(image)
-    width, height = imgObj.size
-    if width >= frameSize[0]:
-      frameSize = (width, frameSize[1])
-    if height >= frameSize[1]:
-      frameSize = (frameSize[0], height)
 
   for image in imagePaths:
     imgObj = Image.open(image)
