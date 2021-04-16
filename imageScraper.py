@@ -11,13 +11,13 @@ reddit = praw.Reddit(
 )
 
 #print(reddit.read_only)
-for submission in reddit.subreddit("dankmemes").hot(limit=100):
-    print(submission.title)
+for submission in reddit.subreddit("memes").hot(limit=10):
+    #print(submission.title)
     try:
       img = requests.get(submission.url)
-      with open(f"generated/{submission.title}.png", "wb") as file:
+      with open(f"generated/images/{submission.title[:10]}.png", "wb") as file:
         file.write(img.content)
     except:
       print("No image Found")
 
-os.system("python VideoGenerator.py")
+#os.system("python VideoGenerator.py")

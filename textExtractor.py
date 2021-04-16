@@ -1,11 +1,14 @@
-import cv2
+import cv2, glob
 import pytesseract
 
 
 pytesseract.pytesseract.tesseract_cmd = 'tesseract\\tesseract.exe'
 
-img = cv2.imread("generated\\images\\Brutal.png")
+text = ''
 
-text = pytesseract.image_to_string(image= img)
-
-print(text)
+for image in glob.glob("generated\\images\\*.png"): 
+  img = cv2.imread(image)
+  text += str(pytesseract.image_to_string(image=img))
+  
+with open("generated/Scripts/script.txt", "w+") as file:
+  file.write(text)
