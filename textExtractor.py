@@ -29,5 +29,6 @@ with open("generated/Scripts/script.txt", "w+") as file:
 with open("generates/Scripts/script.txt", "rw") as file:
   lines = file.readlines()
   for line in lines:
-    #remove lines with a "" charactetr in them. and minimise the txt file
-    #Maby even make your own format, get some basic shit together.
+    if line.startswith(""):
+      lines.remove(line)
+  file.write(lines)

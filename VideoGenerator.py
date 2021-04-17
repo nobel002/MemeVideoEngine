@@ -4,7 +4,7 @@ from PIL import Image
 import PIL
 
 frameSize = (2000, 2000)
-FILENAME = "test003"
+FILENAME = "test004"
 PATH = "generated/images/*.png"
 
 

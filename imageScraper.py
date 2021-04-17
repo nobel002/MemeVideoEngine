@@ -11,7 +11,7 @@ reddit = praw.Reddit(
 )
 
 #print(reddit.read_only)
-for submission in reddit.subreddit("memes").hot(limit=10):
+for submission in reddit.subreddit("memes").top(limit=10):
     #print(submission.title)
     if not(submission.is_self):
       try:
