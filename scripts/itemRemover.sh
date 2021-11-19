@@ -1,3 +1,5 @@
+# !/bin/bash
+
 @echo %cd%
 @cd ../generated/images
 @del *.png -r
